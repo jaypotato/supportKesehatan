@@ -15,7 +15,7 @@ public class ConsoleTest
         ctx.load("classpath:datasource.xml");
         ctx.refresh();
         
-        PesertaDao pesertaDao =  ctx.getBean("pesertaDao", PesertaDao.class);
+        PesertaDao pesertaDao =  ctx.getBean("pesertaJaskes", PesertaDao.class);
         
         PesertaJaskes peserta1 = new PesertaJaskes("vijay", "jl.memet sastrawirya 43-45");
         
