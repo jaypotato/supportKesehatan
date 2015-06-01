@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
-import com.sun.jna.platform.win32.WinDef.BOOL;
+
 
 @Entity
 @Table(name = "peserta_jaskes")
@@ -35,7 +35,7 @@ public class PesertaJaskes {
 	@Column(name = "soft_delete", nullable = false)
 	private boolean soft_delete;
 	
-	@Column(name = "create_date", nullable = false)
+	@Column(name = "create_date")
 	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
 	private DateTime create_date;
 
@@ -48,7 +48,7 @@ public class PesertaJaskes {
 
 	public PesertaJaskes(String nama, String alamat,
 			boolean soft_delete, DateTime create_date, DateTime last_update) {
-		super();
+		//super();
 		//this.id = id;
 		this.nama = nama;
 		this.alamat = alamat;
