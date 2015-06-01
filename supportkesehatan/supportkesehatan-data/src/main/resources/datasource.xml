@@ -15,12 +15,12 @@
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
-		destroy-method="close">
-		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:~/onlineshop-db" />
-		<property name="username" value="sa" />
-		<property name="password" value="123" />
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/PBKK" />
+		<property name="username" value="postgres" />
+		<property name="password" value="tasmania2w@W" />
 	</bean>
 
 	<bean id="sessionFactory"
@@ -31,15 +31,15 @@
 
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop> <!-- tergantung DB nya, ganti dialextnya -->
-				<prop key="hibernate.show_sql">true</prop> <!-- query tar muncul di console -->
-				<prop key="hibernate.hbm2ddl.auto">create-drop</prop> 
+				<prop key="hibernate.hbm2ddl.auto"></prop> <!-- tergantung DB nya, ganti dialextnya -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> <!-- query tar muncul di console -->
+				<prop key="hibernate.show_sql">true</prop> 
 				<!-- hibernate mapping data definition lang. 
 				create drop = selalu di create lalu di drop lagi -->
 			</props>
 		</property>
 
-		<property name="packagesToScan" value="com.pbkk.toko.domain" />
+		<property name="packagesToScan" value="org.supportkesehatan.domain" />
 		 <!-- tolong scan semua class di domain nanti jadi table (tergantung mapping) -->
 	</bean>
 
@@ -48,7 +48,7 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<tx:annotation-driven />
+	<tx:annotation-driven transaction-manager="transactionManager"/> 
 
 	<context:component-scan base-package="org.supportkesehatan.dao" />
 	<!-- untuk injeksi, ga perlu tulis2 lagi -->
