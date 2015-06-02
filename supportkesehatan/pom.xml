@@ -9,8 +9,8 @@
 		<module>supportkesehatan-data</module>
 		<module>supportkesehatan-domain</module>
 		<module>supportkesehatan-services</module>
-    <module>supportkesehatan-web</module>
-  </modules>
+    	<module>supportkesehatan-web</module>
+  	</modules>
 
 	<properties>
 		<jdk.version>1.8</jdk.version>
