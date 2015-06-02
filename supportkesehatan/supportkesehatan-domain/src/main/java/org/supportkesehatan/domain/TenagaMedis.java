@@ -21,20 +21,17 @@ public class TenagaMedis
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_tenaga_medis")
-	private UUID id;
+	@Column(name = "id_tenaga_medis", nullable = false)
+	private String id;
 	
-	@Column(name = "nama", length = 30, nullable = false)
+	@Column(name = "id_jenis_tenaga_medis", nullable = false)
+	private String id_jenis_tenaga_medis;
+	
+	@Column(name = "nama_tenaga_medis", length = 30, nullable = false)
 	private String nama;
 	
-	@Column(name = "alamat", length = 50, nullable = false)
+	@Column(name = "alamat_tenaga_medis", length = 50, nullable = false)
 	private String alamat;
-	
-	@Column(name = "tempat_lahir", length = 30, nullable = false)
-	private String tempat_lahir;
-	
-	@Column(name = "tanggal_lahir", length = 10, nullable = false)
-	private String tanggal_lahir;
 	
 	@Column(name = "no_telp", length = 15, nullable=false)
 	private String no_telp;
@@ -53,29 +50,48 @@ public class TenagaMedis
 	public TenagaMedis(){
 	}
 	
-	public TenagaMedis(UUID id_tenaga_kesehatan, String nama,
+	public TenagaMedis(String id_tenaga_kesehatan, String nama,
 			String alamat, String tempat_lahir, String tanggal_lahir,
 			String no_telp, boolean soft_delete, DateTime create_date,
 			DateTime last_update) {
 		this.id = id_tenaga_kesehatan;
 		this.nama = nama;
 		this.alamat = alamat;
-		this.tempat_lahir = tempat_lahir;
-		this.tanggal_lahir = tanggal_lahir;
 		this.no_telp = no_telp;
 		this.soft_delete = soft_delete;
 		this.create_date = create_date;
 		this.last_update = last_update;
 	}
 
+	public TenagaMedis(String id_tenaga_kesehatan, 
+			String id_jenis_tenaga_medis, String nama,
+			String alamat, String tempat_lahir, String tanggal_lahir,
+			String no_telp, boolean soft_delete, DateTime create_date,
+			DateTime last_update) {
+		this.id = id_tenaga_kesehatan;
+		this.id_jenis_tenaga_medis = id_jenis_tenaga_medis;
+		this.nama = nama;
+		this.alamat = alamat;
+		this.no_telp = no_telp;
+		this.soft_delete = soft_delete;
+		this.create_date = create_date;
+		this.last_update = last_update;
+	}
 
-
-	public UUID getId_tenaga_kesehatan() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId_tenaga_kesehatan(UUID id_tenaga_kesehatan) {
-		this.id = id_tenaga_kesehatan;
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getIdJenisTenagaMedis() {
+		return id_jenis_tenaga_medis;
+	}
+
+	public void setIdJenisTenagaMedis(String id) {
+		this.id_jenis_tenaga_medis = id;
 	}
 
 	public String getNama() {
@@ -94,51 +110,35 @@ public class TenagaMedis
 		this.alamat = alamat;
 	}
 
-	public String getTempat_lahir() {
-		return tempat_lahir;
-	}
-
-	public void setTempat_lahir(String tempat_lahir) {
-		this.tempat_lahir = tempat_lahir;
-	}
-
-	public String getTanggal_lahir() {
-		return tanggal_lahir;
-	}
-
-	public void setTanggal_lahir(String tanggal_lahir) {
-		this.tanggal_lahir = tanggal_lahir;
-	}
-
-	public String getNo_telp() {
+	public String getNoTelp() {
 		return no_telp;
 	}
 
-	public void setNo_telp(String no_telp) {
+	public void setNoTelp(String no_telp) {
 		this.no_telp = no_telp;
 	}
 
-	public boolean getSoft_delete() {
+	public boolean getSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 	

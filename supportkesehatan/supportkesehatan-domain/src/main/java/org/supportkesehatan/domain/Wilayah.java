@@ -20,16 +20,16 @@ public class Wilayah {
 	@Id
 	//@GeneratedValue(generator = "uuid2")
 	//@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_wilayah")
+	@Column(name = "id_wilayah", nullable = false)
 	private int id;
 	
-	@Column(name = "wil_id_wilayah")
+	@Column(name = "wil_id_wilayah", nullable = false)
 	private int id2;
 	
-	@Column(name= "id_level_wilayah")
+	@Column(name= "id_level_wilayah", nullable = false)
 	private int id_level;
 	
-	@Column(name = "nama_wilayah")
+	@Column(name = "nama_wilayah", nullable = false)
 	private String nama;
 	
 	@Column(name = "expired_date", nullable= true)
@@ -76,11 +76,11 @@ public class Wilayah {
 		this.id2 = id2;
 	}
 
-	public int getId_level() {
+	public int getIdLevel() {
 		return id_level;
 	}
 
-	public void setId_level(int id_level) {
+	public void setIdLevel(int id_level) {
 		this.id_level = id_level;
 	}
 
@@ -92,35 +92,35 @@ public class Wilayah {
 		this.nama = nama;
 	}
 
-	public DateTime getExpired_date() {
+	public DateTime getExpiredDate() {
 		return expired_date;
 	}
 
-	public void setExpired_date(DateTime expired_date) {
+	public void setExpiredDate(DateTime expired_date) {
 		this.expired_date = expired_date;
 	}
 
-	public boolean isSoft_delete() {
+	public boolean isSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 	

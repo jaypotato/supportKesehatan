@@ -20,14 +20,17 @@ public class KlaimAnggaran {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_klaim")
-	private UUID id;
+	@Column(name = "id_klaim", nullable = false)
+	private String id;
+	
+	@Column(name = "id_sarana", nullable = false)
+	private String id_sarana;
 	
 	@Column(name = "nama_klaim", length = 30, nullable = false)
 	private String nama;
 	
-	@Column(name = "tanggal_klaim")
-	private String tanggal;
+	@Column(name = "tanggal_klaim", nullable = false)
+	private DateTime tanggal;
 	
 	@Column(name = "besar_klaim")
 	private int besar;
@@ -35,7 +38,7 @@ public class KlaimAnggaran {
 	@Column(name = "penjelasan")
 	private String penjelasan;
 
-	public KlaimAnggaran(UUID id, String nama, String tanggal, int besar,
+	public KlaimAnggaran(String id, String nama, DateTime tanggal, int besar,
 			String penjelasan) {
 		super();
 		this.id = id;
@@ -45,12 +48,20 @@ public class KlaimAnggaran {
 		this.penjelasan = penjelasan;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getIdSarana() {
+		return id_sarana;
+	}
+
+	public void setIdSarana(String id) {
+		this.id_sarana = id;
 	}
 
 	public String getNama() {
@@ -61,11 +72,11 @@ public class KlaimAnggaran {
 		this.nama = nama;
 	}
 
-	public String getTanggal() {
+	public DateTime getTanggal() {
 		return tanggal;
 	}
 
-	public void setTanggal(String tanggal) {
+	public void setTanggal(DateTime tanggal) {
 		this.tanggal = tanggal;
 	}
 

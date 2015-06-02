@@ -20,13 +20,19 @@ public class SaranaKesehatan {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_sarana")
-	private UUID id;
+	@Column(name = "id_sarana", nullable = false)
+	private String id;
+	
+	@Column(name = "id_jenis_sarana", nullable = false)
+	private String id_jenis_sarana;
+	
+	@Column(name = "id_wilayah", nullable = false)
+	private int id_wilayah;
 
-	@Column(name = "nama_sarana")
+	@Column(name = "nama_sarana", nullable = false)
 	private String nama;
 
-	@Column(name = "alamat_sarana")
+	@Column(name = "alamat_sarana", nullable = false)
 	private String alamat;
 	
 	@Column(name = "soft_delete", nullable = false)
@@ -40,7 +46,7 @@ public class SaranaKesehatan {
 	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
 	private DateTime last_update;
 
-	public SaranaKesehatan(UUID id, String nama, String alamat,
+	public SaranaKesehatan(String id, String nama, String alamat,
 			DateTime create_date, DateTime last_update, boolean soft_delete) {
 		super();
 		this.id = id;
@@ -50,20 +56,50 @@ public class SaranaKesehatan {
 		this.last_update = last_update;
 		this.soft_delete = soft_delete;
 	}
+	
+	public SaranaKesehatan(String id, String id_jenis_sarana, 
+			int id_wilayah, String nama, String alamat,
+			DateTime create_date, DateTime last_update, boolean soft_delete) {
+		super();
+		this.id = id;
+		this.id_jenis_sarana = id_jenis_sarana;
+		this.id_wilayah = id_wilayah;
+		this.nama = nama;
+		this.alamat = alamat;
+		this.create_date = create_date;
+		this.last_update = last_update;
+		this.soft_delete = soft_delete;
+	}
 
-	public SaranaKesehatan(UUID id, String nama, String alamat) {
+	public SaranaKesehatan(String id, String nama, String alamat) {
 		super();
 		this.id = id;
 		this.nama = nama;
 		this.alamat = alamat;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getIdJenisSarana() {
+		return id_jenis_sarana;
+	}
+
+	public void setIdJenisSarana(String id) {
+		this.id_jenis_sarana = id;
+	}
+	
+	public int getIdWilayah() {
+		return id_wilayah;
+	}
+
+	public void setIdWilayah(int id) {
+		this.id_wilayah = id;
 	}
 
 	public String getNama() {
@@ -82,27 +118,27 @@ public class SaranaKesehatan {
 		this.alamat = alamat;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 
-	public boolean isSoft_delete() {
+	public boolean isSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 

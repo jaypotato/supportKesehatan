@@ -20,8 +20,8 @@ public class KTP {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "nomor_reg_ktp")
-	private UUID id;
+	@Column(name = "nomor_reg_ktp", nullable = false)
+	private String id;
 	
 	@Column(name = "soft_delete", nullable = false)
 	private boolean soft_delete;
@@ -34,7 +34,7 @@ public class KTP {
 	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
 	private DateTime last_update;
 
-	public KTP(UUID id, DateTime create_date, DateTime last_update,
+	public KTP(String id, DateTime create_date, DateTime last_update,
 			boolean soft_delete) {
 		super();
 		this.id = id;
@@ -43,16 +43,16 @@ public class KTP {
 		this.soft_delete = soft_delete;
 	}
 
-	public KTP(UUID id) {
+	public KTP(String id) {
 		super();
 		this.id = id;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

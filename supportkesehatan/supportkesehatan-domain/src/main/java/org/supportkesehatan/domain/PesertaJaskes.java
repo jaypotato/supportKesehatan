@@ -23,13 +23,16 @@ public class PesertaJaskes {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_peserta")
-	private UUID id;
+	@Column(name = "id_peserta", nullable = false)
+	private String id;
 	
-	@Column(name = "nama", length=30, nullable = false)
+	@Column(name = "id_jenis_kepesertaan", nullable = false)
+	private String id_jenis_kepesertaan;
+	
+	@Column(name = "nama_peserta", length=30, nullable = false)
 	private String nama;
 			
-	@Column(name = "alamat", length = 50, nullable = false)
+	@Column(name = "alamat_peserta", length = 50, nullable = false)
 	private String alamat;
 	
 	@Column(name = "soft_delete", nullable = false)
@@ -46,6 +49,19 @@ public class PesertaJaskes {
 	public PesertaJaskes(){
 	}
 
+	public PesertaJaskes(String id, String id_jenis_kepesertaan, 
+			String nama, String alamat,
+			boolean soft_delete, DateTime create_date, DateTime last_update) {
+		//super();
+		this.id = id;
+		this.id_jenis_kepesertaan = id_jenis_kepesertaan;
+		this.nama = nama;
+		this.alamat = alamat;
+		this.soft_delete = soft_delete;
+		this.create_date = create_date;
+		this.last_update = last_update;
+	}
+	
 	public PesertaJaskes(String nama, String alamat,
 			boolean soft_delete, DateTime create_date, DateTime last_update) {
 		//super();
@@ -64,12 +80,20 @@ public class PesertaJaskes {
 		this.alamat = alamat;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getIdJenisKepesertaan() {
+		return id_jenis_kepesertaan;
+	}
+
+	public void setIdJenisKepesertaan(String id) {
+		this.id_jenis_kepesertaan = id;
 	}
 
 	public String getNama() {
@@ -88,27 +112,27 @@ public class PesertaJaskes {
 		this.alamat = alamat;
 	}
 
-	public boolean getSoft_delete() {
+	public boolean getSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 

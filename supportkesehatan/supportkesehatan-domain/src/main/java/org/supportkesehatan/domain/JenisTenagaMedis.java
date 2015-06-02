@@ -19,10 +19,10 @@ public class JenisTenagaMedis {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id_jenis_tenaga_kesehatan")
-	private UUID id;
+	@Column(name = "id_jenis_tenaga_medis", nullable = false)
+	private String id;
 	
-	@Column(name = "nama_jenis_tenaga_kesehatan")
+	@Column(name = "nama_jenis_tenaga_medis", nullable = false)
 	private String jenis;
 	
 	@Column(name = "soft_delete", nullable = false)
@@ -39,7 +39,7 @@ public class JenisTenagaMedis {
 	@Column(name = "expired_date")
 	private DateTime expired_date;
 
-	public JenisTenagaMedis(UUID id, String jenis, DateTime create_date,
+	public JenisTenagaMedis(String id, String jenis, DateTime create_date,
 			DateTime last_update, boolean soft_delete, DateTime expired_date) {
 		super();
 		this.id = id;
@@ -49,12 +49,21 @@ public class JenisTenagaMedis {
 		this.soft_delete = soft_delete;
 		this.expired_date = expired_date;
 	}
+	
+	public JenisTenagaMedis(String id, String jenis, DateTime create_date,
+			DateTime expired_date) {
+		super();
+		this.id = id;
+		this.jenis = jenis;
+		this.create_date = create_date;
+		this.expired_date = expired_date;
+	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -66,35 +75,35 @@ public class JenisTenagaMedis {
 		this.jenis = jenis;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 
-	public boolean isSoft_delete() {
+	public boolean isSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 
-	public DateTime getExpired_date() {
+	public DateTime getExpiredDate() {
 		return expired_date;
 	}
 
-	public void setExpired_date(DateTime expired_date) {
+	public void setExpiredDate(DateTime expired_date) {
 		this.expired_date = expired_date;
 	}
 	

@@ -21,11 +21,20 @@ public class RekamMedis {
 	@Id
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "id")
-	private UUID id;
+	@Column(name = "id_rekam_medis", nullable = false)
+	private String id;
 	
-	@Column(name = "tanggal")
-	private String tanggal;
+	@Column(name = "id_sarana", nullable = false)
+	private String id_sarana;
+	
+	@Column(name = "id_tenaga_medis", nullable = false)
+	private String id_tenaga_medis;
+	
+	@Column(name = "id_peserta", nullable = false)
+	private String id_peserta;
+	
+	@Column(name = "tanggal_rekam_medis", nullable = false)
+	private DateTime tanggal;
 	
 	@Column(name = "diagnosa", length = 50)
 	private String diagnosa;
@@ -41,7 +50,22 @@ public class RekamMedis {
 	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
 	private DateTime last_update;
 
-	public RekamMedis(UUID id, String tanggal, String diagnosa,
+	public RekamMedis(String id,  String id_sarana, String id_tenaga_medis,
+			String id_peserta, DateTime tanggal, String diagnosa,
+			DateTime create_date, DateTime last_update, boolean soft_delete) {
+		super();
+		this.id = id;
+		this.id_sarana = id_sarana;
+		this.id_tenaga_medis = id_tenaga_medis;
+		this.id_peserta = id_peserta;
+		this.tanggal = tanggal;
+		this.diagnosa = diagnosa;
+		this.create_date = create_date;
+		this.last_update = last_update;
+		this.soft_delete = soft_delete;
+	}
+	
+	public RekamMedis(String id, DateTime tanggal, String diagnosa,
 			DateTime create_date, DateTime last_update, boolean soft_delete) {
 		super();
 		this.id = id;
@@ -52,26 +76,50 @@ public class RekamMedis {
 		this.soft_delete = soft_delete;
 	}
 
-	public RekamMedis(UUID id, String tanggal, String diagnosa) {
+	public RekamMedis(String id, DateTime tanggal, String diagnosa) {
 		super();
 		this.id = id;
 		this.tanggal = tanggal;
 		this.diagnosa = diagnosa;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+	
+	public String getIdSarana() {
+		return id_sarana;
+	}
 
-	public String getTanggal() {
+	public void setIdSarana(String id) {
+		this.id_sarana = id;
+	}
+	
+	public String getIdTenagaMedis() {
+		return id_tenaga_medis;
+	}
+
+	public void setIdTenagaMedis(String id) {
+		this.id_tenaga_medis = id;
+	}
+	
+	public String getIdPeserta() {
+		return id_peserta;
+	}
+
+	public void setIdPeserta(String id) {
+		this.id_peserta = id;
+	}
+
+	public DateTime getTanggal() {
 		return tanggal;
 	}
 
-	public void setTanggal(String tanggal) {
+	public void setTanggal(DateTime tanggal) {
 		this.tanggal = tanggal;
 	}
 
@@ -83,27 +131,27 @@ public class RekamMedis {
 		this.diagnosa = diagnosa;
 	}
 
-	public DateTime getCreate_date() {
+	public DateTime getCreateDate() {
 		return create_date;
 	}
 
-	public void setCreate_date(DateTime create_date) {
+	public void setCreateDate(DateTime create_date) {
 		this.create_date = create_date;
 	}
 
-	public DateTime getLast_update() {
+	public DateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(DateTime last_update) {
+	public void setLastUpdate(DateTime last_update) {
 		this.last_update = last_update;
 	}
 
-	public boolean isSoft_delete() {
+	public boolean isSoftDelete() {
 		return soft_delete;
 	}
 
-	public void setSoft_delete(boolean soft_delete) {
+	public void setSoftDelete(boolean soft_delete) {
 		this.soft_delete = soft_delete;
 	}
 	
