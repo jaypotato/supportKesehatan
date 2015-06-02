@@ -76,25 +76,25 @@
       <fieldset class="registration-form">
         <div class="control-group">
           <div class="controls">
-            <input type="text" id="namaklaim" name="namaklaim" placeholder="Nama Klaim" class="input-xlarge">
+            <input type="text" id="namaklaim" name="namaklaim" placeholder="Nama Klaim" class="input-xlarge" required>
           </div>
         </div>
 
         <div class="control-group">
           <div class="controls">
-            <input type="date" id="tanggalklaim" name="tanggalklaim" placeholder="Tanggal Klaim" class="input-xlarge">
+            <input type="date" id="tanggalklaim" name="tanggalklaim" class="input-xlarge" required>
           </div>
         </div>
 
         <div class="control-group">
           <div class="controls">
-            <input type="number" id="besarklaim" name="besarklaim" placeholder="Besar Klaim Anggaran" class="input-xlarge">
+            <input type="number" id="besarklaim" min="0" name="besarklaim" placeholder="Besar Klaim Anggaran" class="input-xlarge" required>
           </div>
         </div>
 
         <div class="control-group">
           <div class="controls">
-            <input type="text" id="keteranganklaim" name="keteranganklaim" placeholder="Keterangan Klaim" class="input-xlarge">
+            <input type="text" id="keteranganklaim" name="keteranganklaim" placeholder="Keterangan Klaim" class="input-xlarge">            
           </div>
         </div>
 

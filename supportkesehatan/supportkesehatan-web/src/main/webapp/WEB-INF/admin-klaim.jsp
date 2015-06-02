@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
-                    <h1>Klaim Anggaran</h1>
+                    <h1>Daftar Klaim Anggaran</h1>
                 </div>
                 <div class="span6">
                     <ul class="breadcrumb pull-right">
@@ -70,78 +70,23 @@
     <!-- / .title -->       
 
     
-    <section class="services">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-bar-chart icon-large"></i>
-                        <p> </p>
-                        <h4>Premium Bootstrap Templates</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-cog icon-large"></i>
-                        <p> </p>
-                        <h4>Web Design &amp; Development</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-heart icon-large"></i>
-                        <p> </p>
-                        <h4>Premium Wordpress Themes</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <hr>
-
-            <div class="row-fluid">
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-globe icon-large"></i>
-                        <p> </p>
-                        <h4>Responsive Web Design</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-camera icon-large"></i>
-                        <p> </p>
-                        <h4>iOS Application Development</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-                <div class="span4">
-                    <div class="center">
-                        <i style="font-size: 48px" class="icon-bullhorn icon-large"></i>
-                        <p> </p>
-                        <h4>Android Application Development</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <hr>
-
-            <div class="center">
-                <a class="btn btn-primary btn-large" href="#">Request a free quote</a>
-            </div>
-            <p>&nbsp;</p>
-
-        </div>
+    <section class="container">
+        <table class="table">
+            <tr>
+                <th>No.</th>
+                <th>Nama Klaim</th>
+                <th>Tanggal Klaim</th>
+                <th>Besar Klaim</th>
+                <th>Keterangan Klaim</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Random Claim</td>
+                <td>1 Juni 2015</td>
+                <td>Rp 50.000,00</td>
+                <td>-</td>
+            </tr>
+        </table>
     </section>
 
     <!--Bottom-->
