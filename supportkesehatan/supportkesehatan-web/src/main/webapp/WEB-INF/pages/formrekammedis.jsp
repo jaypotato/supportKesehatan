@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Pendaftaran| Sistem Jaminan Kesehatan</title>
+  <title>Klaim| Sistem Jaminan Kesehatan</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/sl-slide.css">
+  <link rel="stylesheet" href="css/chosen.css">
 
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -42,25 +43,15 @@
                     <ul class="nav">
                         <li><a href="index.html">Beranda</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jaminan Kesehatan <i class="icon-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rujukan <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="">Peserta</a></li>
-                                <li><a href="">Manfaat</a></li>
-                                <li><a href="">Iuran</a></li>
+                                <li><a href="">Ajukan Rujukan</a></li>
+                                <li><a href="">Terima Rujukan</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Fasilitas Kesehatan</a></li>
-                                <li><a href="">Manfaat</a></li>
-                                <li><a href="">Iuran</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="register.html"><i class="icon-key"></i> Daftar </a></li>
-                        <li class="login">
-                            <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i> Masuk </a>
-                        </li>
+                        <li><a href="">Informasi Kesehatan</a></li>
+                        <li><a href="">Klaim Anggaran</a></li>
+                        <li class="login"><a href="register.html"><i class="icon-signout"></i> Keluar </a></li>
                     </ul>        
                 </div><!--/.nav-collapse -->
             </div>
@@ -73,7 +64,7 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span6">
-          <h1>Pendaftaran</h1>
+          <h1>Rekam Medis</h1>
         </div>
       </div>
     </div>
@@ -81,41 +72,31 @@
   <!-- / .title -->       
 
 
-  <section id="registration-page" class="container">
+  <section id="klaim-form" class="container">
     <form class="center" action='' method="POST">
       <fieldset class="registration-form">
         <div class="control-group">
-          <!-- Username -->
           <div class="controls">
-            <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge">
+            <label style="text-align:left;">Nama Pasien: </label>
+            <div class="chosen-container">
+                <select data-placeholder="Nama Pasien" class="chosen-select" class="input-xlarge">
+                <option value=""></option>                
+                </select>
+            </div>
           </div>
         </div>
 
         <div class="control-group">
-          <!-- E-mail -->
           <div class="controls">
-            <input type="text" id="email" name="email" placeholder="E-mail" class="input-xlarge">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <!-- Password-->
-          <div class="controls">
-            <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <!-- Password -->
-          <div class="controls">
-            <input type="password" id="password_confirm" name="password_confirm" placeholder="Password (Confirm)" class="input-xlarge">
+            <label>Diagonsa: </label>
+            <textarea id="diagnosa" name="diagnosa" class="input-xlarge"></textarea>
           </div>
         </div>
 
         <div class="control-group">
           <!-- Button -->
           <div class="controls">
-            <button class="btn btn-success btn-large btn-block">Daftar</button>
+            <button class="btn btn-success btn-large btn-block">Simpan</button>
           </div>
         </div>
       </fieldset>
@@ -268,31 +249,18 @@
 </footer>
 <!--/Footer-->
 
-<!--  Login form -->
-<div class="modal hide fade in" id="loginForm" aria-hidden="false">
-    <div class="modal-header">
-        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
-        <h4>Login Form</h4>
-    </div>
-    <!--Modal Body-->
-    <div class="modal-body">
-        <form class="form-inline" action="index.html" method="post" id="form-login">
-            <input type="text" class="input-small" placeholder="Email">
-            <input type="password" class="input-small" placeholder="Password">
-            <label class="checkbox">
-                <input type="checkbox"> Remember me
-            </label>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </form>
-        <a href="#">Forgot your password?</a>
-    </div>
-    <!--/Modal Body-->
-</div>
-<!--  /Login form -->
-
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(function(){
+            $(".chosen-select").chosen();
+        });
+         $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
 
 </body>
 </html>

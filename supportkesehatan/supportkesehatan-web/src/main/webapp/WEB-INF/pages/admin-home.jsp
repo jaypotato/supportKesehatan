@@ -40,7 +40,7 @@
                 <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li><a href="/">Beranda</a></li>
+                        <li><a href="index.html">Beranda</a></li>
                         <li><a href="">Pembayaran Iuran</a></li>
                         <li><a href="">Klaim Anggaran</a></li>
                         <li class="login"><a href="register.html"><i class="icon-signout"></i> Keluar </a></li>

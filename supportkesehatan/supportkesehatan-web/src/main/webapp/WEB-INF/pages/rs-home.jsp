@@ -40,7 +40,7 @@
                 <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li><a href="/">Beranda</a></li>
+                        <li><a href="index.html">Beranda</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rujukan <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
