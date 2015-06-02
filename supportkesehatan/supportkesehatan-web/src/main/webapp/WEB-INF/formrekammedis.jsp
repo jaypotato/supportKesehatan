@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/sl-slide.css">
+  <link rel="stylesheet" href="css/chosen.css">
 
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -63,7 +64,7 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span6">
-          <h1>Ajukan Klaim Anggaran</h1>
+          <h1>Rekam Medis</h1>
         </div>
       </div>
     </div>
@@ -87,19 +88,8 @@
 
         <div class="control-group">
           <div class="controls">
-            <input type="date" id="tanggalklaim" name="tanggalklaim" placeholder="Tanggal Klaim" class="input-xlarge">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="controls">
-            <input type="number" id="besarklaim" name="besarklaim" placeholder="Besar Klaim Anggaran" class="input-xlarge">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="controls">
-            <input type="text" id="keteranganklaim" name="keteranganklaim" placeholder="Keterangan Klaim" class="input-xlarge">
+            <label>Diagonsa: </label>
+            <textarea id="diagnosa" name="diagnosa" class="input-xlarge"></textarea>
           </div>
         </div>
 
@@ -262,6 +252,15 @@
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(function(){
+            $(".chosen-select").chosen();
+        });
+         $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
 
 </body>
 </html>
