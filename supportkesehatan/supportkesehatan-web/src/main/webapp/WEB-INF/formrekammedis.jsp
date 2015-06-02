@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Rujukan | Sistem Jaminan Kesehatan</title>
+  <title>Klaim| Sistem Jaminan Kesehatan</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/sl-slide.css">
-  <link rel="stylesheet" href="css/chosen.css">
 
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -64,7 +63,7 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span6">
-          <h1>Ajukan Rujukan</h1>
+          <h1>Ajukan Klaim Anggaran</h1>
         </div>
       </div>
     </div>
@@ -72,7 +71,7 @@
   <!-- / .title -->       
 
 
-  <section id="rujukan-form" class="container">
+  <section id="klaim-form" class="container">
     <form class="center" action='' method="POST">
       <fieldset class="registration-form">
         <div class="control-group">
@@ -83,41 +82,31 @@
                 <option value=""></option>                
                 </select>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
           </div>
         </div>
 
         <div class="control-group">
           <div class="controls">
-            <label style="text-align:left;">Fasilitas Kesehatan yang Dituju: </label>
-            <div class="chosen-container">
-                <select data-placeholder="Fasilitas Kesehatan yang Dituju" class="chosen-select" class="input-xlarge">
-                <option value=""></option>                
-                </select>
-            </div>
+            <input type="date" id="tanggalklaim" name="tanggalklaim" placeholder="Tanggal Klaim" class="input-xlarge">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="number" id="besarklaim" name="besarklaim" placeholder="Besar Klaim Anggaran" class="input-xlarge">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="text" id="keteranganklaim" name="keteranganklaim" placeholder="Keterangan Klaim" class="input-xlarge">
           </div>
         </div>
 
         <div class="control-group">
           <!-- Button -->
           <div class="controls">
-            <button class="btn btn-success btn-large btn-block">Ajukan Rujukan</button>
+            <button class="btn btn-success btn-large btn-block">Simpan</button>
           </div>
         </div>
       </fieldset>
@@ -273,14 +262,6 @@
 <script src="js/vendor/jquery-1.9.1.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/chosen.jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
-        $(function(){
-            $(".chosen-select").chosen();
-        });
-         $(function() {
-            $( "#datepicker" ).datepicker();
-        });
-    </script>
+
 </body>
 </html>
