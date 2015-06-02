@@ -25,7 +25,6 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fasilitas Kesehatan <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="">Daftar Fasilitas Kesehatan</a></li>
-                                <li><a href="">Rujukan</a></li>
                             </ul>
                         </li>
                         <li class="login"><a href="register.html"><i class="fa fa-sign-out"></i> Keluar </a></li>
