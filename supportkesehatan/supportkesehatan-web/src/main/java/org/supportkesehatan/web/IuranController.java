@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class IuranController {
 	@RequestMapping(value = "/pembayaraniuran", method = RequestMethod.GET)
 	public String riwayatiuran() {
-		return ""; // login.jsp
+		return "bayariuran"; // login.jsp
 	}
 }
