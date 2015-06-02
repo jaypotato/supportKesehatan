@@ -41,27 +41,10 @@
                 <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li class="active"><a href="index.html">Beranda</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jaminan Kesehatan <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Riwayat Kesehatan</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Premi JasKes <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Bayar Iuran</a>
-                                <li><a href="">Riwayat Pembayaran</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fasilitas Kesehatan <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Daftar Fasilitas Kesehatan</a></li>
-                            </ul>
-                        </li>
-                        <li class="login"><a href="register.html"><i class="fa fa-sign-out"></i> Keluar </a></li>
+                        <li><a href="/supportkesehatan-web/">Beranda</a></li>
+                        <li><a href="/supportkesehatan-web/pembayaraniuran">Pembayaran Iuran</a></li>
+                        <li><a href="/supportkesehatan-web/listclaim">Klaim Anggaran</a></li>
+                        <li class="login"><a href=""><i class="icon-signout"></i> Keluar </a></li>
                     </ul>        
                 </div><!--/.nav-collapse -->
             </div>

@@ -40,9 +40,9 @@
                 <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li><a href="/">Beranda</a></li>
-                        <li><a href="/pembayaraniuran">Pembayaran Iuran</a></li>
-                        <li><a href="/listclaim">Klaim Anggaran</a></li>
+                        <li><a href="/supportkesehatan-web/">Beranda</a></li>
+                        <li><a href="/supportkesehatan-web/pembayaraniuran">Pembayaran Iuran</a></li>
+                        <li><a href="/supportkesehatan-web/listclaim">Klaim Anggaran</a></li>
                         <li class="login"><a href=""><i class="icon-signout"></i> Keluar </a></li>
                     </ul>        
                 </div><!--/.nav-collapse -->
