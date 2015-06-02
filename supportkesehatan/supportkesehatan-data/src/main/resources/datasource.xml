@@ -31,7 +31,11 @@
 
 		<property name="hibernateProperties">
 			<props>
+<<<<<<< Updated upstream
 				<prop key="hibernate.hbm2ddl.auto"></prop> <!-- tergantung DB nya, ganti dialextnya -->
+=======
+				 <!-- tergantung DB nya, ganti dialextnya -->
+>>>>>>> Stashed changes
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> <!-- query tar muncul di console -->
 				<prop key="hibernate.show_sql">true</prop> 
 				<!-- hibernate mapping data definition lang. 
