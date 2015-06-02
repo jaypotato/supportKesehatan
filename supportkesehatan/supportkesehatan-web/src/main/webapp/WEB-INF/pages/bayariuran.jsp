@@ -51,7 +51,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Premi JasKes <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="">Bayar Iuran</a></li>
+                                <li><a href="">Bayar Iuran</a>
                                 <li><a href="">Riwayat Pembayaran</a></li>
                             </ul>
                         </li>
@@ -68,7 +68,7 @@
         </div>
   </header>
   <!-- /header -->
-<section class="title">
+  <section class="title">
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
@@ -76,36 +76,42 @@
                 </div>
             </div>
         </div>
-    </section>
+  </section>
 
-    <section id="contact-page" class="container">
-    
+  <section id="bayar-iuran" class="container">
+    <form class="center" action='' method="POST">
+      <fieldset class="registration-form">
+        <div class="control-group">
+          <div class="controls">
+            <label style="text-align:left;">Jenis Iuran: </label>
+            <div class="chosen-container">
+                <select name="jenis_iuran" data-placeholder="Jenis Iuran" class="input-xlarge">
+                    <option value="iuran_pokok">Iuran Pokok - Rp 20.000,-</option>                
+                    <option value="iuran_bulanan">Iuran Pokok - Rp 40.000,-</option>
+                    <option value="iuran_pokok">Iuran Momentual - Rp 60.000,-</option>            
+                </select>
+            </div>
+          </div>
+        </div>
 
-        <div class="center gap">
-      <h1><i class="icon-file icon-big"></i> Daftar Riwayat Pembayaran Iuran <i class="icon-file icon-big"></i>  </h1>
-    </div>
-        <div class="row-fluid">
+        <div class="control-group">
+          <div class="controls">
+            <label style="text-align:left;">Tanggal Pembayaran: </label>
+            <div class="chosen-container">
+                <input class="input-xlarge" type="date" name="tanggal_iuran">
+            </div>
+          </div>
+        </div>
 
-           <table class="table table-hover table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th style="text-align:center; width:25%;">Tanggal</th>
-                  <th style="text-align:center;width:50%;">Besar Iuran</th>
-                  <th style="text-align:center;width:10%;">Jenis Iuran</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-          <tr>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;"></td>
-          </tbody>
-          </table>
-
-    </div>
-
-</section>
+        <div class="control-group">
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-success btn-large btn-block">Submit Pembayaran</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </section>
 
 
 <!--Footer-->
