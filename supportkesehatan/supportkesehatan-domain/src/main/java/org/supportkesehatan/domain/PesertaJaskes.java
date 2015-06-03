@@ -24,15 +24,14 @@ public class PesertaJaskes {
 	@GeneratedValue(generator = "uuid2")
 	@GenericGenerator(name = "uuid2", strategy = "uuid2")
 	@Column(name = "id_peserta", nullable = false)
-	private String id;
+	private UUID id;
 	
-	@Column(name = "id_jenis_kepesertaan", nullable = false)
-	private String id_jenis_kepesertaan;
+
 	
-	@Column(name = "nama_peserta", length=30, nullable = false)
+	@Column(name = "nama", length=30, nullable = false)
 	private String nama;
 			
-	@Column(name = "alamat_peserta", length = 50, nullable = false)
+	@Column(name = "alamat", length = 50, nullable = false)
 	private String alamat;
 	
 	@Column(name = "soft_delete", nullable = false)
@@ -49,12 +48,12 @@ public class PesertaJaskes {
 	public PesertaJaskes(){
 	}
 
-	public PesertaJaskes(String id, String id_jenis_kepesertaan, 
+	public PesertaJaskes(UUID id,  
 			String nama, String alamat,
 			boolean soft_delete, DateTime create_date, DateTime last_update) {
 		//super();
 		this.id = id;
-		this.id_jenis_kepesertaan = id_jenis_kepesertaan;
+		//this.id_jenis_kepesertaan = id_jenis_kepesertaan;
 		this.nama = nama;
 		this.alamat = alamat;
 		this.soft_delete = soft_delete;
@@ -80,21 +79,21 @@ public class PesertaJaskes {
 		this.alamat = alamat;
 	}
 
-	public String getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 	
-	public String getIdJenisKepesertaan() {
+	/*public String getIdJenisKepesertaan() {
 		return id_jenis_kepesertaan;
 	}
 
 	public void setIdJenisKepesertaan(String id) {
 		this.id_jenis_kepesertaan = id;
-	}
+	}*/
 
 	public String getNama() {
 		return nama;

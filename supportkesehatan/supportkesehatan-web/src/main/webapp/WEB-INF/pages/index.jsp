@@ -79,8 +79,8 @@
                 <div class="sl-slide-inner">
                     <div class="container">
                         <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
-                        <h2>Creative Ideas</h2>
-                        <h3 class="gap">Tincidunt condimentum eros</h3>
+                        <h2>BPJS Kesehatan)</h2>
+                        <h3 class="gap">merupakan Badan Usaha Milik Negara yang ditugaskan khusus ...</h3>
                         <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                     </div>
                 </div>
@@ -92,8 +92,8 @@
                 <div class="sl-slide-inner">
                     <div class="container">
                         <img class="pull-right" src="images/sample/slider/img2.png" alt="" />
-                        <h2>Planning &amp; Analysis</h2>
-                        <h3 class="gap">Aenean ultricies mi vitast</h3>
+                        <h2>Layanan &amp; Fasilitas</h2>
+                        <h3 class="gap">Peserta BPJS memiliki kemudahan dalam melakukan pemeriksaan kesehatan...</h3>
                         <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                     </div>
                 </div>
@@ -105,8 +105,8 @@
                 <div class="sl-slide-inner">
                    <div class="container">
                     <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
-                    <h2>Unique Solutions</h2>
-                    <h3 class="gap">Breatures who have been utterly</h3>
+                    <h2>Pusat Layanan Informasi</h2>
+                    <h3 class="gap">BPJS kesehatan membuka layanan informasi bagi seluruh pengguna layanan BPJS...</h3>
                     <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                 </div>
             </div>
@@ -135,9 +135,7 @@
                 <h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</h4>
                 <p class="no-margin">Tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet</p>
             </div>
-            <div class="span3">
-                <a class="btn btn-success btn-large pull-right" href="http://shapebootstrap.net">Free Download Nova</a>
-            </div>
+            
         </div>
     </div>
 </section>
@@ -158,7 +156,7 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Web Design</h4>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p></p>
                     </div>
                 </div>
             </div>            
@@ -170,7 +168,7 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Graphic Design</h4>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p></p>
                     </div>
                 </div>
             </div>            
